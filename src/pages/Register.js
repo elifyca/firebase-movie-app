@@ -10,10 +10,11 @@ const Register = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
+    const displayName = `${firstName} ${lastName}`;
     e.preventDefault();
-    createUser(email, password, navigate);
+    createUser(email, password, displayName, navigate);
 
-    console.log(firstName, lastName);
+    // console.log(firstName, lastName);
   };
   return (
     <div className="d-flex justify-content-center">
@@ -85,7 +86,7 @@ const Register = () => {
           />
         </form>
       </div>
-    </div> 
+    </div>
   );
 };
 
